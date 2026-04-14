@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperZakeke\Model;
 
@@ -14,6 +16,7 @@ class Item
     public ?string $preDesignedTemplateName = null;
     public ?string $printFilesStatus = null;
     public ?string $printingFilesZip = null;
+
     /** @var array<int, PrintingFile> */
     public array $printingFiles = [];
     public ?Price $price = null;
@@ -21,6 +24,7 @@ class Item
     public function addPrintingFile(PrintingFile $printingFile): self
     {
         $this->printingFiles[] = $printingFile;
+
         return $this;
     }
 }
